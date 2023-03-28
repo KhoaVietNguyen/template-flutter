@@ -1,0 +1,59 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
+  errors:
+    invalid_annotation_target: ignore
+  plugins:
+    - dart_code_metrics
+
+linter:
+  rules:
+    require_trailing_commas: true
+    always_use_package_imports: false
+
+dart_code_metrics:
+  metrics:
+    cyclomatic-complexity: 20
+    number-of-parameters: 4
+    maximum-nesting-level: 5
+  rules: # Refer all rules here: https://dartcodemetrics.dev/docs/rules
+    # Common rules
+    - no-boolean-literal-compare
+    - prefer-trailing-comma:
+        exclude:
+          - test/**
+          - lib/gen/assets.gen.dart
+    - prefer-first
+    - prefer-last
+    - no-equal-then-else
+    # Flutter specific
+    - always-remove-listener
+    - avoid-border-all
+    - avoid-shrink-wrap-in-lists
+    - avoid-unnecessary-setstate
+    - use-setstate-synchronously
+    - avoid-expanded-as-spacer
+    - avoid-wrapping-in-padding
+    - check-for-equals-in-render-object-setters
+    - consistent-update-render-object
+    - prefer-const-border-radius
+    - prefer-correct-edge-insets-constructor
+    - prefer-single-widget-per-file
+    - prefer-using-list-view
+#    - avoid-returning-widgets
+#    - prefer-extracting-callbacks
+  anti-patterns:
+    - long-method
+    - long-parameter-list

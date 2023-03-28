@@ -1,0 +1,22 @@
+str,vi_VN,en_US
+app_name,App,App
+common.ok,OK,OK
+common.cancel,Huỷ,Cancel
+common.update,Cập nhật,Update
+common.save,Lưu,Save
+common.delete,Xoá,Delete
+common.confirm,Xác nhận,Confirm
+common.close,Đóng,Close
+common.back,Trở lại,Back
+common.next,Tiếp,Next
+common.no_data,Không có dữ liệu,No data
+auth.login,Đăng nhập,Login
+auth.logout,Đăng xuất,Logout
+auth.register,Đăng ký,Register
+auth.forgot_password,Quên mật khẩu,Forgot password
+form.required,{} là trường bắt buộc,{} is required
+homeSub.cabinet,Tủ rượu,cabinet
+homeSub.drunk,Loại đã uống,Wine drunk
+homeSub.winType,Các loại rượu,Wine option
+homeSub.user,Tài khoản,User
+homeSub.title,Home Subscription,Home Subscription
